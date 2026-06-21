@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: Hypertext Markup Language (HTML)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">PEU</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="module1.html">Module 1</a></li>
+                <li><a href="module2.html" class="active">Module 2</a></li>
+                <li><a href="module3.html">Module 3</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Module Header -->
+    <header class="module-header">
+        <div class="container">
+            <h1>Module 2: Hypertext Markup Language (HTML)</h1>
+            <p>Building the Structure of Web Pages</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container module-content">
+        <!-- Introduction -->
+        <section class="module-section">
+            <h2>Introduction to HTML</h2>
+            <p>HTML (Hypertext Markup Language) is the standard markup language used to create web pages. It provides the structure and content for all websites. HTML works hand-in-hand with CSS for styling and JavaScript for interactivity.</p>
+            <img src="module2-image.jpg" alt="HTML Basics" class="module-image">
+        </section>
+
+        <!-- Learning Outcomes -->
+        <section class="module-section">
+            <h2>Learning Outcomes</h2>
+            <p>After completing this module, you will be able to:</p>
+            <ul class="outcomes-list">
+                <li>Understand the structure of HTML documents</li>
+                <li>Use semantic HTML5 elements appropriately</li>
+                <li>Create forms with various input types</li>
+                <li>Implement accessibility best practices</li>
+                <li>Optimize HTML for search engines (SEO)</li>
+                <li>Debug and validate HTML code</li>
+            </ul>
+        </section>
+
+        <!-- HTML Elements Table -->
+        <section class="module-section">
+            <h2>Essential HTML Elements</h2>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>&lt;h1&gt; - &lt;h6&gt;</strong></td>
+                        <td>Headings (6 levels)</td>
+                        <td>&lt;h1&gt;Main Title&lt;/h1&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;p&gt;</strong></td>
+                        <td>Paragraph text</td>
+                        <td>&lt;p&gt;This is a paragraph.&lt;/p&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;a&gt;</strong></td>
+                        <td>Hyperlinks</td>
+                        <td>&lt;a href="page.html"&gt;Link&lt;/a&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;img&gt;</strong></td>
+                        <td>Images</td>
+                        <td>&lt;img src="image.jpg" alt="Image"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</strong></td>
+                        <td>Lists (unordered/ordered)</td>
+                        <td>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>&lt;form&gt;, &lt;input&gt;</strong></td>
+                        <td>Form elements</td>
+                        <td>&lt;input type="text" name="username"&gt;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- HTML Document Structure -->
+        <section class="module-section">
+            <h2>HTML Document Structure</h2>
+            <div class="content-box">
+                <p>Every HTML document follows a basic structure:</p>
+                <pre class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Content goes here&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+        </section>
+
+        <!-- Semantic HTML5 -->
+        <section class="module-section">
+            <h2>Semantic HTML5 Elements</h2>
+            <div class="content-box">
+                <p>Semantic elements clearly describe their meaning to both the browser and developer:</p>
+                <ul>
+                    <li><strong>&lt;header&gt;</strong> - Introductory content</li>
+                    <li><strong>&lt;nav&gt;</strong> - Navigation links</li>
+                    <li><strong>&lt;main&gt;</strong> - Main content of the page</li>
+                    <li><strong>&lt;article&gt;</strong> - Independent, self-contained content</li>
+                    <li><strong>&lt;section&gt;</strong> - Thematic grouping of content</li>
+                    <li><strong>&lt;aside&gt;</strong> - Sidebar or related content</li>
+                    <li><strong>&lt;footer&gt;</strong> - Footer of page or section</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Forms -->
+        <section class="module-section">
+            <h2>HTML Forms</h2>
+            <div class="content-box">
+                <p>Forms allow users to input data. Here are common form elements:</p>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Input Type</th>
+                            <th>Purpose</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>text</td>
+                            <td>Single line text input</td>
+                            <td>&lt;input type="text"&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>password</td>
+                            <td>Hidden text input</td>
+                            <td>&lt;input type="password"&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td>Email validation</td>
+                            <td>&lt;input type="email"&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>number</td>
+                            <td>Numeric input</td>
+                            <td>&lt;input type="number"&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>checkbox</td>
+                            <td>Multiple selections</td>
+                            <td>&lt;input type="checkbox"&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>radio</td>
+                            <td>Single selection</td>
+                            <td>&lt;input type="radio"&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>submit</td>
+                            <td>Submit button</td>
+                            <td>&lt;input type="submit"&gt;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section class="module-section">
+            <h2>HTML Best Practices</h2>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h3>Use Semantic Elements</h3>
+                    <p>Use semantic HTML5 elements to improve accessibility and SEO.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Valid HTML</h3>
+                    <p>Always validate your HTML using W3C Markup Validation Service.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Accessibility</h3>
+                    <p>Use alt text for images, proper heading hierarchy, and ARIA labels.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Meta Tags</h3>
+                    <p>Include meta tags for charset, viewport, and description.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <section class="module-nav">
+            <a href="module1.html" class="btn btn-secondary">← Previous Module</a>
+            <a href="module3.html" class="btn btn-primary">Next Module →</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Prince Emmanuel Umoh. All rights reserved. | Computer Science Department</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="#top">Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

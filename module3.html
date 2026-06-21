@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3: Cascading Stylesheets (CSS)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">PEU</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="module1.html">Module 1</a></li>
+                <li><a href="module2.html">Module 2</a></li>
+                <li><a href="module3.html" class="active">Module 3</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Module Header -->
+    <header class="module-header">
+        <div class="container">
+            <h1>Module 3: Cascading Stylesheets (CSS)</h1>
+            <p>Styling and Designing Beautiful Web Pages</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container module-content">
+        <!-- Introduction -->
+        <section class="module-section">
+            <h2>Introduction to CSS</h2>
+            <p>CSS (Cascading Stylesheets) is used to style and layout web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This module teaches you how to create beautiful, responsive, and professional-looking websites.</p>
+            <img src="module3-image.jpg" alt="CSS Styling" class="module-image">
+        </section>
+
+        <!-- Learning Outcomes -->
+        <section class="module-section">
+            <h2>Learning Outcomes</h2>
+            <p>After completing this module, you will be able to:</p>
+            <ul class="outcomes-list">
+                <li>Write CSS rules and understand selectors</li>
+                <li>Understand the CSS Box Model</li>
+                <li>Create responsive layouts with Flexbox and Grid</li>
+                <li>Implement responsive design principles</li>
+                <li>Use CSS for animations and transitions</li>
+                <li>Apply design best practices and accessibility</li>
+            </ul>
+        </section>
+
+        <!-- CSS Basics -->
+        <section class="module-section">
+            <h2>CSS Basics</h2>
+            <div class="content-box">
+                <p>CSS rules consist of a selector and a declaration block:</p>
+                <pre class="code-block">selector {
+  property: value;
+  property: value;
+}</pre>
+                <p><strong>Example:</strong></p>
+                <pre class="code-block">h1 {
+  color: #333;
+  font-size: 32px;
+  margin-bottom: 20px;
+}</pre>
+            </div>
+        </section>
+
+        <!-- CSS Selectors -->
+        <section class="module-section">
+            <h2>CSS Selectors</h2>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Selector Type</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Element</strong></td>
+                        <td>Selects all elements of a type</td>
+                        <td>p { color: blue; }</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Class</strong></td>
+                        <td>Selects elements with a specific class</td>
+                        <td>.highlight { color: yellow; }</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ID</strong></td>
+                        <td>Selects element with unique ID</td>
+                        <td>#header { background: navy; }</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Descendant</strong></td>
+                        <td>Selects nested elements</td>
+                        <td>ul li { list-style: none; }</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pseudo-class</strong></td>
+                        <td>Selects element in specific state</td>
+                        <td>a:hover { color: red; }</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Attribute</strong></td>
+                        <td>Selects elements with attributes</td>
+                        <td>input[type="text"] { border: 1px solid; }</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- CSS Box Model -->
+        <section class="module-section">
+            <h2>The CSS Box Model</h2>
+            <div class="content-box">
+                <p>Every element in CSS is a box. Understanding the box model is crucial for controlling layout:</p>
+                <ul>
+                    <li><strong>Content:</strong> The actual content (text, images, etc.)</li>
+                    <li><strong>Padding:</strong> Space inside the element, around the content</li>
+                    <li><strong>Border:</strong> The edge of the element</li>
+                    <li><strong>Margin:</strong> Space outside the element, between other elements</li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>Box Model Properties:</strong></p>
+                <pre class="code-block">div {
+  width: 300px;
+  padding: 20px;
+  border: 2px solid black;
+  margin: 10px;
+}</pre>
+            </div>
+        </section>
+
+        <!-- Layout Techniques -->
+        <section class="module-section">
+            <h2>Modern Layout Techniques</h2>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h3>Flexbox</h3>
+                    <p>One-dimensional layout system perfect for navigation menus, card layouts, and centering content.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>CSS Grid</h3>
+                    <p>Two-dimensional layout system ideal for complex page layouts and dashboard designs.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Media Queries</h3>
+                    <p>Responsive design using breakpoints for different screen sizes.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Positioning</h3>
+                    <p>Relative, absolute, fixed, and sticky positioning for precise control.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive Design -->
+        <section class="module-section">
+            <h2>Responsive Design</h2>
+            <div class="content-box">
+                <p>Create designs that work on all devices using responsive techniques:</p>
+                <h4>Fluid Layout:</h4>
+                <pre class="code-block">/* Use percentages instead of fixed pixels */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}</pre>
+                <h4>Mobile-First Approach:</h4>
+                <pre class="code-block">/* Start with mobile styles, then add complexity */
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+}</pre>
+            </div>
+        </section>
+
+        <!-- Colors and Typography -->
+        <section class="module-section">
+            <h2>Colors and Typography</h2>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Purpose</th>
+                        <th>Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>color</strong></td>
+                        <td>Text color</td>
+                        <td>color: #333;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>background-color</strong></td>
+                        <td>Background color</td>
+                        <td>background-color: #f0f0f0;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>font-family</strong></td>
+                        <td>Font typeface</td>
+                        <td>font-family: Arial, sans-serif;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>font-size</strong></td>
+                        <td>Text size</td>
+                        <td>font-size: 16px;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>font-weight</strong></td>
+                        <td>Text boldness</td>
+                        <td>font-weight: bold;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>line-height</strong></td>
+                        <td>Line spacing</td>
+                        <td>line-height: 1.6;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Transitions and Animations -->
+        <section class="module-section">
+            <h2>Animations and Transitions</h2>
+            <div class="content-box">
+                <h4>Transitions:</h4>
+                <pre class="code-block">a {
+  color: blue;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: red;
+}</pre>
+                <h4>Keyframe Animations:</h4>
+                <pre class="code-block">@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.element {
+  animation: slideIn 1s ease-in-out;
+}</pre>
+            </div>
+        </section>
+
+        <!-- CSS Best Practices -->
+        <section class="module-section">
+            <h2>CSS Best Practices</h2>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h3>DRY Principle</h3>
+                    <p>Don't Repeat Yourself - Use classes and variables to avoid code duplication.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Mobile-First</h3>
+                    <p>Design for mobile devices first, then enhance for larger screens.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Performance</h3>
+                    <p>Minimize CSS, use shorthand properties, and optimize images.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Accessibility</h3>
+                    <p>Ensure sufficient color contrast and readable font sizes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <section class="module-nav">
+            <a href="module2.html" class="btn btn-secondary">← Previous Module</a>
+            <a href="index.html" class="btn btn-primary">Back to Home</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Prince Emmanuel Umoh. All rights reserved. | Computer Science Department</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="#top">Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

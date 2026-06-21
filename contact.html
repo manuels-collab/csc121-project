@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Prince Emmanuel Umoh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">PEU</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="module1.html">Module 1</a></li>
+                <li><a href="module2.html">Module 2</a></li>
+                <li><a href="module3.html">Module 3</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="module-header">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <p>Get in touch with Prince Emmanuel Umoh</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="contact-wrapper">
+            <!-- Contact Information -->
+            <section class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="info-card">
+                    <div class="info-item">
+                        <h3>Full Name</h3>
+                        <p>Prince Emmanuel Umoh</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-item">
+                        <h3>Registration Number</h3>
+                        <p>2025/co/cs/071</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-item">
+                        <h3>Department</h3>
+                        <p>Computer Science</p>
+                    </div>
+                </div>
+
+                <div class="contact-details">
+                    <h3>Additional Information</h3>
+                    <ul>
+                        <li><strong>Level:</strong> 100 Level</li>
+                        <li><strong>Specialization:</strong> Web Programming Fundamentals</li>
+                        <li><strong>Institution:</strong> University of Calabar</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="contact-form-section">
+                <h2>Send Me a Message</h2>
+                <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+                
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            placeholder="Your full name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            required
+                            placeholder="Your phone number (e.g., +234-XXX-XXX-XXXX)"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Your email address"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Select a subject --</option>
+                            <option value="Module Inquiry">Module Inquiry</option>
+                            <option value="Website Feedback">Website Feedback</option>
+                            <option value="Technical Support">Technical Support</option>
+                            <option value="Collaboration">Collaboration Opportunity</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comments">Comments/Message *</label>
+                        <textarea 
+                            id="comments" 
+                            name="comments" 
+                            rows="6" 
+                            required
+                            placeholder="Please share your thoughts, questions, or feedback..."
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox">
+                            <input type="checkbox" name="subscribe" value="yes">
+                            Subscribe me to updates about new content
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="reset" class="btn btn-secondary">Clear Form</button>
+                </form>
+
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <h3>✓ Message Sent Successfully!</h3>
+                    <p>Thank you for your message. I'll get back to you soon.</p>
+                </div>
+
+                <div id="errorMessage" class="error-message" style="display: none;">
+                    <h3>✗ Error Sending Message</h3>
+                    <p>Please try again or contact me directly.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Additional Information Section -->
+        <section class="additional-info" style="margin-top: 60px;">
+            <h2>Other Ways to Reach Out</h2>
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>📚 Academic Inquiry</h3>
+                    <p>For questions about the programming modules and course content, please use the contact form above.</p>
+                </div>
+                <div class="info-box">
+                    <h3>💻 Technical Issues</h3>
+                    <p>If you encounter any issues with this website, please let me know through the contact form.</p>
+                </div>
+                <div class="info-box">
+                    <h3>🤝 Collaboration</h3>
+                    <p>Interested in collaborating on a web development project? Get in touch!</p>
+                </div>
+                <div class="info-box">
+                    <h3>📧 Email Preferred</h3>
+                    <p>For detailed discussions, please provide your email address in the form.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Links -->
+        <section class="module-nav" style="margin-top: 60px;">
+            <a href="module3.html" class="btn btn-secondary">← Back to Module 3</a>
+            <a href="index.html" class="btn btn-primary">Home →</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Prince Emmanuel Umoh. All rights reserved. | Computer Science Department</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="#top">Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

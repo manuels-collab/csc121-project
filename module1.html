@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 1: Web Programming Basics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">PEU</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="module1.html" class="active">Module 1</a></li>
+                <li><a href="module2.html">Module 2</a></li>
+                <li><a href="module3.html">Module 3</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Module Header -->
+    <header class="module-header">
+        <div class="container">
+            <h1>Module 1: Web Programming Basics</h1>
+            <p>Understanding the Fundamentals of Web Architecture</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container module-content">
+        <!-- Introduction -->
+        <section class="module-section">
+            <h2>Introduction</h2>
+            <p>Web Programming Basics is the foundation of all web development. This module introduces you to the essential concepts that power the internet and web applications. You'll learn how browsers, servers, and protocols work together to deliver content across the globe.</p>
+            <img src="module1-image.jpg" alt="Web Programming Basics" class="module-image">
+        </section>
+
+        <!-- Learning Outcomes -->
+        <section class="module-section">
+            <h2>Learning Outcomes</h2>
+            <p>Upon completion of this module, you will be able to:</p>
+            <ul class="outcomes-list">
+                <li>Explain the client-server architecture</li>
+                <li>Understand HTTP and HTTPS protocols</li>
+                <li>Describe how web browsers and servers communicate</li>
+                <li>Identify the key components of web standards</li>
+                <li>Explain the role of DNS and domain names</li>
+                <li>Understand web security basics</li>
+            </ul>
+        </section>
+
+        <!-- Core Topics Table -->
+        <section class="module-section">
+            <h2>Core Topics</h2>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Topic</th>
+                        <th>Description</th>
+                        <th>Key Concepts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Client-Server Model</strong></td>
+                        <td>The fundamental architecture of the web</td>
+                        <td>Clients, Servers, Requests, Responses</td>
+                    </tr>
+                    <tr>
+                        <td><strong>HTTP Protocol</strong></td>
+                        <td>Application layer protocol for web communication</td>
+                        <td>GET, POST, Status Codes, Headers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>URLs and Domains</strong></td>
+                        <td>Addressing system for web resources</td>
+                        <td>DNS, Domain Names, IP Addresses</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Web Browsers</strong></td>
+                        <td>Client software that interprets web content</td>
+                        <td>Rendering, Parsing, DOM</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Web Servers</strong></td>
+                        <td>Software that serves web content</td>
+                        <td>Apache, Nginx, IIS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Client-Server Architecture -->
+        <section class="module-section">
+            <h2>Client-Server Architecture</h2>
+            <div class="content-box">
+                <h3>What is Client-Server Architecture?</h3>
+                <p>Client-Server architecture is a network application architecture that separates tasks between clients (consumers of resources) and servers (providers of resources).</p>
+                
+                <h4>The Client:</h4>
+                <ul>
+                    <li>Web browser (Chrome, Firefox, Safari, Edge)</li>
+                    <li>Sends HTTP requests to the server</li>
+                    <li>Displays the response to the user</li>
+                    <li>Processes user interactions</li>
+                </ul>
+
+                <h4>The Server:</h4>
+                <ul>
+                    <li>Listens for incoming requests</li>
+                    <li>Processes the request</li>
+                    <li>Sends back an HTTP response</li>
+                    <li>Stores and manages data</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- HTTP Protocol -->
+        <section class="module-section">
+            <h2>HTTP Protocol</h2>
+            <div class="content-box">
+                <h3>HyperText Transfer Protocol (HTTP)</h3>
+                <p>HTTP is the foundation of data communication for the World Wide Web. It is a stateless, application-layer protocol.</p>
+
+                <h4>HTTP Methods (Verbs):</h4>
+                <ul>
+                    <li><strong>GET:</strong> Request data from a server</li>
+                    <li><strong>POST:</strong> Submit data to a server</li>
+                    <li><strong>PUT:</strong> Update a resource on the server</li>
+                    <li><strong>DELETE:</strong> Remove a resource from the server</li>
+                    <li><strong>HEAD:</strong> Like GET but without the message body</li>
+                </ul>
+
+                <h4>HTTP Status Codes:</h4>
+                <ul>
+                    <li><strong>1xx:</strong> Informational</li>
+                    <li><strong>2xx:</strong> Success (e.g., 200 OK)</li>
+                    <li><strong>3xx:</strong> Redirection (e.g., 301 Moved)</li>
+                    <li><strong>4xx:</strong> Client Error (e.g., 404 Not Found)</li>
+                    <li><strong>5xx:</strong> Server Error (e.g., 500 Internal Server Error)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Key Concepts -->
+        <section class="module-section">
+            <h2>Key Concepts</h2>
+            <div class="concept-grid">
+                <div class="concept-card">
+                    <h3>DNS</h3>
+                    <p><strong>Domain Name System</strong> - Translates domain names to IP addresses so browsers can load internet resources.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>IP Address</h3>
+                    <p>A unique identifier assigned to devices on the internet. Format: 192.168.1.1</p>
+                </div>
+                <div class="concept-card">
+                    <h3>Port Numbers</h3>
+                    <p>Communication endpoints. HTTP uses port 80, HTTPS uses port 443.</p>
+                </div>
+                <div class="concept-card">
+                    <h3>HTTPS</h3>
+                    <p>Secure version of HTTP with SSL/TLS encryption for safe data transmission.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="module-section">
+            <h2>Resources to Learn More</h2>
+            <ul class="resources-list">
+                <li>Mozilla Developer Network (MDN) - Web Documentation</li>
+                <li>W3C - Web Standards Organization</li>
+                <li>HTTP/2 and HTTP/3 Specifications</li>
+                <li>Browser Developer Tools</li>
+                <li>Wireshark - Network Protocol Analyzer</li>
+            </ul>
+        </section>
+
+        <!-- Navigation Buttons -->
+        <section class="module-nav">
+            <a href="index.html" class="btn btn-secondary">← Back to Home</a>
+            <a href="module2.html" class="btn btn-primary">Next Module →</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Prince Emmanuel Umoh. All rights reserved. | Computer Science Department</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="#top">Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
