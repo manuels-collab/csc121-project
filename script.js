@@ -369,3 +369,88 @@ console.log('Website loaded successfully');
 console.log('Created by: Prince Emmanuel Umoh');
 console.log('Registration: 2025/co/cs/071');
 console.log('Department: Computer Science');
+
+// ============================================
+// OFFLINE AUDIO GENERATION (simple beep message)
+// ============================================
+window.addEventListener('DOMContentLoaded', function() {
+    try {
+        const audioEl = document.getElementById('offlineAudio');
+        if (!audioEl) return;
+
+        // Generate a short beep WAV (sine tone) using Web Audio API
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+
+        const ctx = new AudioContext();
+        const duration = 2.0; // seconds
+        const sampleRate = ctx.sampleRate;
+        const frameCount = Math.floor(sampleRate * duration);
+        const buffer = ctx.createBuffer(1, frameCount, sampleRate);
+        const data = buffer.getChannelData(0);
+
+        // Sine wave at 440Hz with simple envelope and spoken-like tones using frequency changes
+        for (let i = 0; i < frameCount; i++) {
+            const t = i / sampleRate;
+            // frequency sweep for a simple 'message' feel
+            const freq = 440 + 220 * Math.sin(2 * Math.PI * 0.5 * t);
+            // amplitude envelope (attack/decay)
+            const env = Math.min(1, t * 5) * (1 - Math.min(1, t / duration));
+            data[i] = Math.sin(2 * Math.PI * freq * t) * 0.2 * env;
+        }
+
+        // Convert AudioBuffer to WAV Blob
+        function audioBufferToWav(buffer) {
+            const numOfChan = buffer.numberOfChannels;
+            const length = buffer.length * numOfChan * 2 + 44;
+            const bufferArray = new ArrayBuffer(length);
+            const view = new DataView(bufferArray);
+
+            /* RIFF identifier */ writeString(view, 0, 'RIFF');
+            /* file length */ view.setUint32(4, 36 + buffer.length * numOfChan * 2, true);
+            /* RIFF type */ writeString(view, 8, 'WAVE');
+            /* format chunk identifier */ writeString(view, 12, 'fmt ');
+            /* format chunk length */ view.setUint32(16, 16, true);
+            /* sample format (raw) */ view.setUint16(20, 1, true);
+            /* channel count */ view.setUint16(22, numOfChan, true);
+            /* sample rate */ view.setUint32(24, buffer.sampleRate, true);
+            /* byte rate (sampleRate * blockAlign) */ view.setUint32(28, buffer.sampleRate * numOfChan * 2, true);
+            /* block align (channel count * bytes per sample) */ view.setUint16(32, numOfChan * 2, true);
+            /* bits per sample */ view.setUint16(34, 16, true);
+            /* data chunk identifier */ writeString(view, 36, 'data');
+            /* data chunk length */ view.setUint32(40, buffer.length * numOfChan * 2, true);
+
+            // write interleaved data
+            let offset = 44;
+            for (let i = 0; i < buffer.length; i++) {
+                for (let channel = 0; channel < numOfChan; channel++) {
+                    let sample = Math.max(-1, Math.min(1, buffer.getChannelData(channel)[i]));
+                    view.setInt16(offset, sample < 0 ? sample * 0x8000 : sample * 0x7FFF, true);
+                    offset += 2;
+                }
+            }
+
+            return new Blob([view], { type: 'audio/wav' });
+        }
+
+        function writeString(view, offset, string) {
+            for (let i = 0; i < string.length; i++) {
+                view.setUint8(offset + i, string.charCodeAt(i));
+            }
+        }
+
+        const wavBlob = audioBufferToWav(buffer);
+        const url = URL.createObjectURL(wavBlob);
+        audioEl.src = url;
+
+        // Optional: unlock audio on user gesture if autoplay blocked
+        const unlock = () => {
+            if (ctx.state === 'suspended' && typeof ctx.resume === 'function') ctx.resume();
+            audioEl.play().catch(() => {});
+            window.removeEventListener('click', unlock);
+        };
+        window.addEventListener('click', unlock);
+    } catch (err) {
+        console.error('Offline audio generation failed:', err);
+    }
+});
